@@ -8,11 +8,9 @@ A tool for easing creation and adding things to Spring projects made with electr
 
 For now it just doing limited stuff but it have a lot on the road
 
-### ScreenShots
+### VideoShot
 
-<p align="center">
-[![Videoshot](https://img.youtube.com/vi/GlCB7vHOGA8/0.jpg)](https://www.youtube.com/watch?v=GlCB7vHOGA8)
-</p>
+[![Everything Is AWESOME](https://img.youtube.com/vi/GlCB7vHOGA8/0.jpg)](https://www.youtube.com/watch?v=GlCB7vHOGA8 "Everything Is AWESOME")
 
 ### TODO
 
