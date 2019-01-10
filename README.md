@@ -11,7 +11,7 @@ For now it just doing limited stuff but it have a lot on the road
 ### ScreenShots
 
 <p align="center">
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/GlCB7vHOGA8/0.jpg)](https://www.youtube.com/watch?v=GlCB7vHOGA8)
+[![Videoshot](https://img.youtube.com/vi/GlCB7vHOGA8/0.jpg)](https://www.youtube.com/watch?v=GlCB7vHOGA8)
 </p>
 
 ### TODO
