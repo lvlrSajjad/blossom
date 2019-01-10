@@ -111,9 +111,9 @@
     "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
   },
   "author": {
-    "name": "Electron React Boilerplte Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
+    "name": "Sajjad Asadi",
+    "email": "lvlr.xaus@gmail.com",
+    "url": "https://github.com/lvlrsajjad"
   },
   "contributors": [
     {
@@ -254,7 +254,7 @@
     "devtron": "^1.4.0",
     "electron-debug": "^2.0.0",
     "electron-log": "^2.2.17",
-    "electron-updater": "^3.2.3",
+    "electron-updater": "^4.0.0",
     "fix-path": "^2.1.0",
     "history": "^4.7.2",
     "material-icons-react": "^1.0.4",

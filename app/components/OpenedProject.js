@@ -284,21 +284,7 @@ export default class NewProject extends Component<Props> {
             <i style={{ marginRight: 16 }} className="fa fa-times"/>
           </a>
         </div>
-        {boilerplate === 'andross' &&
-        <div style={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
-          <img alt='logo' width='148' src={require('../../resources/launch-icon@3x.png')}/>
-        </div>
-        }
-        {boilerplate === 'bowser' &&
-        <div style={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
-          <img alt='logo' width='242' src={require('../../resources/bowser.png')}/>
-        </div>
-        }
-        {boilerplate === 'ts_andross' &&
-        <div style={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
-          <img alt='logo' width='148' src={require('../../resources/ignite-typescript-logo.png')}/>
-        </div>
-        }
+        
         {packageInstallMode ?
           <Autocomplete
             wrapperStyle={{ width: '100%' }}

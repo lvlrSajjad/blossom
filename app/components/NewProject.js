@@ -37,9 +37,7 @@ export default class NewProject extends Component<Props> {
           </a>
 
         </div>
-        <div style={{display:'flex',width:'100%',justifyContent:'center',alignItems:'center'}}>
-        <img alt='logo' width='256' src={require('../../resources/ignite.png')}/>
-        </div>
+
         <ul style={{width:'80%',padding:0,paddingLeft:16 }}>
           <li style={{alignItems:'left',textAlign:'left',marginBottom:16 }}>
             <i className="fa fa-fire fa-1x no-drag"/>
