@@ -10,7 +10,7 @@ For now it just doing limited stuff but it have a lot on the road
 
 ### VideoShot
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/GlCB7vHOGA8/0.jpg)](https://www.youtube.com/watch?v=GlCB7vHOGA8 "Everything Is AWESOME")
+[![Everything Is AWESOME](https://raw.githubusercontent.com/lvlrSajjad/blossom/master/Screenshots/Untitled.png)](https://www.youtube.com/watch?v=GlCB7vHOGA8 "Everything Is AWESOME")
 
 ### TODO
 
