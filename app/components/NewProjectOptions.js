@@ -55,7 +55,8 @@ export default class NewProjectOptions extends Component<Props> {
     const {
       isLoading,
       name,
-      SqlRest
+      SqlRest,
+      react
     } = this.state;
 
     let path;
@@ -102,36 +103,33 @@ export default class NewProjectOptions extends Component<Props> {
           const tempPath = path + '\\' + repoName + '\\';
           const plainPath = tempPath + 'Plain';
           const restSqlPath = tempPath + 'SqlRest';
+          const reactPath = tempPath + 'React';
+
           ncp(plainPath, path, (err) => {
             if (err) {
               return console.error(err);
             }
-            if (SqlRest === true) {
+            if (react === true) {
+              ncp(reactPath, path, (e) => {
+                if (e) {
+                  return console.error(e);
+                }
+                rimraf(path + '\\' + repoName, () => {
+                  this.setState({ stdout, stderr, error, name: '', isLoading: false });
+                });
+              });
+            }else if (SqlRest === true) {
               ncp(restSqlPath, path, (e) => {
                 if (e) {
                   return console.error(e);
                 }
                 rimraf(path + '\\' + repoName, () => {
-                  this.setState({ stdout, stderr, error, name: '', isLoading: true }, () => {
-                    childProcess.exec('gradlew build', {
-                      shell: true,
-                      cwd: path
-                    }, (errors, sout, sterr) => {
-                      this.setState({ stdout:sout, stderr:sterr, error:errors, name: '', isLoading: false });
-                    });
-                  });
+                  this.setState({ stdout, stderr, error, name: '', isLoading: false });
                 });
               });
             } else {
               rimraf(path + '\\' + repoName, () => {
-                this.setState({ stdout, stderr, error, name: '', isLoading: true }, () => {
-                  childProcess.exec('gradlew build', {
-                    shell: true,
-                    cwd: path
-                  }, (errors, sout, sterr) => {
-                    this.setState({ stdout:sout, stderr:sterr, error:errors, name: '', isLoading: false });
-                  });
-                });
+                this.setState({ stdout, stderr, error, name: '', isLoading: false });
               });
             }
           });
@@ -202,7 +200,7 @@ export default class NewProjectOptions extends Component<Props> {
             <li style={{ alignItems: 'left', textAlign: 'left', marginBottom: 16 }}>
               <label className="switch">
                 <input onChange={() => {
-                  this.setState({ SqlRest: !SqlRest });
+                  this.setState({ SqlRest: !SqlRest,react:!SqlRest === false?false:react });
                 }} checked={SqlRest} type="checkbox"/>
                 <span className="slider round"/>
               </label>
@@ -212,7 +210,7 @@ export default class NewProjectOptions extends Component<Props> {
             <li style={{ alignItems: 'left', textAlign: 'left', marginBottom: 16 }}>
               <label className="switch">
                 <input onChange={(e) => {
-                  this.setState({ react: e.target.react });
+                  this.setState({ react: !react,SqlRest: !react });
                 }} checked={react} type="checkbox"/>
                 <span className="slider round"/>
 
